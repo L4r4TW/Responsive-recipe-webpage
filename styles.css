@@ -50,7 +50,7 @@ html {
 
 .text-preset-4 {
   font-family: "Outfit";
-  font-weight: 400;
+  font-weight: 300;
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0px;
@@ -167,15 +167,38 @@ hr {
   margin: 32px 0px 32px 0px;
 }
 
-/* ul,
-ol {
-  text-align: left;
-  margin: 20px;
-} */
+b {
+  font-family: "Outfit";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0px;
+}
 
-ol li b {
-  display: inline-block;
-  width: 150px;
+#instructions li::before {
+  content: "";
+  /* position: absolute;
+  left: 0;
+  font-size: 20px; */
+}
+
+#instructions li {
+  padding-left: 10px;
+}
+
+ol {
+  padding-left: 0; /* Remove padding */
+  color: var(--stone-600);
+  margin-left: 25px;
+}
+
+ol li::marker {
+  color: var(--brown-800);
+  font-family: "Outfit";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0px;
 }
 
 table {
@@ -183,15 +206,20 @@ table {
   border-collapse: collapse;
 }
 
-td,
-th {
-  border-right: 1px solid #333;
+td {
   padding: 10px;
 }
 
-td:last-child,
-th:last-child {
-  border-right: none;
+tr {
+  border-bottom: 1px solid var(--stone-150); /* Horizontal lines between rows */
+}
+
+tr:last-child {
+  border-bottom: none; /* Remove the bottom border of the last row */
+}
+
+td {
+  border: none; /* No vertical lines between columns */
 }
 
 /* Remove border radius on mobile screens */
