@@ -49,7 +49,7 @@ html {
 }
 
 .text-preset-4 {
-  font-family: "Outfit";
+  font-family: "Outfit", sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 150%;
@@ -68,7 +68,10 @@ body {
   background-color: var(--stone-100);
   font-family: Arial, sans-serif;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center; /* Centers items horizontally */
+  /* height: 100vh; */
   margin: 0;
 }
 
@@ -216,10 +219,31 @@ tr {
 
 tr:last-child {
   border-bottom: none; /* Remove the bottom border of the last row */
+  padding-bottom: 0;
 }
 
 td {
   border: none; /* No vertical lines between columns */
+}
+
+td:nth-child(2) {
+  color: var(--brown-800);
+  font-family: "Outfit";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0px;
+  padding-right: 32px;
+  padding-bottom: 12px;
+}
+
+td:nth-child(1) {
+  padding-left: 32px;
+}
+
+footer {
+  padding: var(--spacing-600);
+  color: var(--stone-900);
 }
 
 /* Remove border radius on mobile screens */
